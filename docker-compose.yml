@@ -1,0 +1,12 @@
+version: "2.5"
+
+services:
+  jackpot:
+    ports:
+      - "3030:80"
+    environment:
+      - VUE_APP_BASE_URL=http://172.17.158.252:5088/
+    # image: 172.32.5.240:5050/kcbl-portal:currentBuild.number
+    build: 
+      context: .
+      dockerfile: Dockerfile
